@@ -6,11 +6,19 @@
     */
 
     //Entrada
-
-
+    let palavra = prompt("Insira um frase ou palavra:").trim();
+    let letra = prompt("Agora insira a letra que voce deseja saber a quantidade:").trim();
+    let quantidade = 0;
     //Processamento
-
+    function quantidadeTotal() {
+        for (let letraInfo of palavra) {
+        if (letraInfo == letra.toLowerCase() || letraInfo == letra.toUpperCase()) {
+            quantidade++;
+        }
+    }
+    return quantidade;
+}
 
     //Saída
-
+    alert(`A palavra/frase ${palavra} possui ${quantidadeTotal()} letra ${letra.toUpperCase()}.`)
 </script>

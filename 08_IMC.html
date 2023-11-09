@@ -6,10 +6,16 @@
     */
 
     //Entrada
-
+    const peso = Number(prompt("Qual e a seu peso ?").trim());
+    const altura = Number(prompt("Qual e a sua altura ?").trim().replace(",", "."));
+    let imc = 0
+    function transformar() {
+        imc = peso / (altura ** 2)
+        return imc;
+    };
 
     //Processamento
-
+    alert(`O seu imc é ${transformar().toFixed(2)}`)
 
     //Saída
 

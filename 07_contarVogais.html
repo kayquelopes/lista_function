@@ -7,10 +7,19 @@
     */
 
     //Entrada
-
+    const textoUser = prompt("informe uma palavra ?").trim().toUpperCase().replace("Á", "A").replace("É", "E").replace("Í", "I").replace("Ó", "O").replace("Ú", "U");
+    function contagem(texto) {
+        let vogais = 0
+        for (const letras of texto) {
+            if (letras == "A" || letras == "E" || letras == "I" || letras == "O" || letras == "U") {
+                vogais++
+            }
+        }
+        alert(`O total de vogais é ${vogais}`)
+    };
 
     //Processamento
-
+    contagem(textoUser);
 
     //Saída
 

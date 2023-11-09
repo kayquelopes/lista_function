@@ -5,11 +5,24 @@
     */
 
     //Entrada
-
+    let num = Number(prompt("Informe o número que deseja saber se é primo:").trim());
 
     //Processamento
+    function primo() {
+        let divisor = 0;
 
+        for (let i = 1; i <= num; i++) {
+            if (num % i == 0) {
+                divisor++;
+            }
+        }
+        if (divisor == 2) {
+            return (`${num} é primo.`);
+        } else {
+            return (`${num} não é primo.`);
+        }
+    }
 
     //Saída
-
+    alert(primo(num));
 </script>
